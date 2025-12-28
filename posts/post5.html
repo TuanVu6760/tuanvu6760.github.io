@@ -16,17 +16,31 @@
     <h2>Thread Pool trong Java</h2>
 
     <p>
-        Thread Pool là kỹ thuật tạo sẵn một nhóm thread để xử lý các công việc.
-        Điều này giúp tiết kiệm tài nguyên hệ thống.
+        Trong quá trình học lập trình Java, mình nhận ra rằng việc tạo quá nhiều thread
+        một cách tùy ý có thể gây tốn tài nguyên và làm giảm hiệu năng của chương trình.
+        Đó là lý do mình tìm hiểu về <b>Thread Pool</b>.
     </p>
 
     <p>
-        Khi có yêu cầu mới, thread rảnh trong pool sẽ được sử dụng.
-        Sau khi xử lý xong, thread quay lại pool.
+        Thread Pool có thể hiểu đơn giản là việc tạo sẵn một nhóm thread và tái sử dụng
+        chúng để xử lý các công việc. Khi có task mới, hệ thống sẽ lấy một thread đang rảnh
+        trong pool để xử lý thay vì tạo thread mới.
     </p>
 
     <p>
-        Thread Pool thường được dùng trong server xử lý nhiều kết nối cùng lúc.
+        Sau khi xử lý xong công việc, thread đó không bị hủy mà sẽ quay trở lại pool
+        để chờ nhiệm vụ tiếp theo. Cách làm này giúp tiết kiệm tài nguyên, giảm chi phí
+        tạo thread và tăng hiệu suất cho ứng dụng.
+    </p>
+
+    <p>
+        Thread Pool thường được sử dụng trong các hệ thống server, nơi phải xử lý
+        nhiều yêu cầu cùng lúc như web server, API hoặc các ứng dụng đa luồng.
+    </p>
+
+    <p>
+        Qua việc tìm hiểu Thread Pool, mình hiểu rõ hơn cách Java quản lý luồng
+        và tầm quan trọng của việc tối ưu tài nguyên trong lập trình hệ thống.
     </p>
 
     <p><i>Tài liệu tham khảo: Java Concurrency</i></p>
@@ -34,3 +48,4 @@
 
 </body>
 </html>
+
